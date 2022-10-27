@@ -1,0 +1,113 @@
+@use 'variables' as v; // para simplificar
+@use 'mixins';
+
+.details{
+    // border: 1px solid red;
+    padding: 25px;
+   
+    
+    &__company{
+        color: v.$Orange;
+        text-transform: uppercase;
+        letter-spacing:1px;
+        font-size: .75em;
+    }
+    &__title{
+        font-size: 1.75em;
+        margin-top: 12px;
+        margin-bottom: 16px;
+    }
+    &__description{
+        font-size: .94em;
+        color: v.$Dark-rayish-blue;
+        margin-bottom: 24px;
+        line-height: 24px;
+    }
+
+    &__price{
+        // width: 57px;
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        align-items: center;
+        &-now{
+           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            // border: 1px solid rgb(152, 250, 6);
+            font-size: 1.75em;
+            font-weight: 700;
+            gap: 18px;
+        }
+        &-discount{
+            // border: 1px solid rgb(255, 0, 212);
+            width: 30px;
+            height: 18px;
+            text-align: center;
+            padding: 2px;
+            border-radius: 15%;
+            background-color: v.$Pale-orange;
+            font-size: .4em;
+            font-weight: 700;
+            color: v.$Orange;
+        }
+        
+        
+        &-before{
+                
+            font-weight: 700;
+            color: v.$Grayish-blue;
+            text-decoration: line-through;
+               
+        }
+    }
+    
+        
+    &__button{
+        @include mixins.button
+
+    
+    }
+   
+    &__icon-cart{
+            // border: 1px solid black;
+            margin-right: 10px;
+            height: 15px;
+        
+            
+            
+    }
+        
+    @media(min-width:1115px){
+        // border: 1px solid red;
+        width: 446px;
+        
+        padding-top: 60px;
+        &__title{
+            font-size: 2.7em;
+            margin-bottom: 48px;
+        }
+        &__description{
+            font-size: 0.9em;
+            margin-bottom: 37px;
+        }
+        &__price{
+            flex-direction: column;
+            // border: 1px solid green;
+            align-items: flex-start;
+            
+      
+        }
+        
+        &__product{
+            display: flex;
+            gap: 32px;
+        }
+        
+     }   
+    
+   
+}

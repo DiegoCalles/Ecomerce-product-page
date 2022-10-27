@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Diego Calles | E-commerce product page</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ 
+  
+  <style>
+    .attribution { font-size: 16px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="main-container">
+    <header class="header">
+      <div class="header__logo-menu">
+        <img class="header__menu" src="./images/icon-menu.svg" alt="icon-menu">
+        <img class="header__logo" src="./images/logo.svg" alt="logo">
+
+        <nav class="navbar">
+          <ul class="navbar__items">
+            <li><a href="#" class="navbar__link">Collection</a></li>
+            <li><a href="#" class="navbar__link">Men</a></li>
+            <li><a href="#" class="navbar__link">Women</a></li>
+            <li><a href="#" class="navbar__link">About</a></li>
+            <li><a href="#" class="navbar__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      
+
+      <!-- beginning- modal navbar -->
+      <div class="modal__navbar__background">
+        <nav class="modal__navbar">
+          <img class="modal__navbar__close-icon" src="./images/icon-close.svg" alt="modal__navbar__close__icon">
+          <ul class="modal__navbar__items">
+            <li><a href="#" class="modal__navbar__link">Collection</a></li>
+            <li><a href="#" class="modal__navbar__link">Men</a></li>
+            <li><a href="#" class="modal__navbar__link">Women</a></li>
+            <li><a href="#" class="modal__navbar__link">About</a></li>
+            <li><a href="#" class="modal__navbar__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- end modal navbar -->
+
+
+      <div class="header__cart-avatar">
+        <div class="header__cart">
+          <div class="header__cart--notification">0</div>
+          <img class="header__cart-icon" src="./images/icon-cart.svg" alt="icon-cart">
+        </div>
+        <img class="header__avatar" src="./images/image-avatar.png" alt="avatar">
+      </div>
+    </header>
+    
+    <section class="content">
+
+      <article class="gallery">
+        <div class="gallery__image-container">
+          <img class="gallery__image__previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="gallery__image__next" src="./images/icon-next.svg" alt="next" >
+        </div>
+        <!-- thumbnails for desktop only -->
+        <div class="gallery__thumbnails">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1" id="1" class="gallery__thumbnail">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2" id="2" class="gallery__thumbnail">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3" id="3" class="gallery__thumbnail">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4" id="4" class="gallery__thumbnail">
+
+        </div>
+      </article>
+      <article class="details">
+        <h2 class="details__company">Sneaker Company</h2>
+        <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+        <p class="details__description">
+            These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <div class="details__price">
+          
+            <p class="details__price-now">$125.00  <span class="details__price-discount">50%</span></p>
+            <p class="details__price-before">$250.00</p>
+              
+        </div>
+          <div class="details__product">
+            <div class="input">
+              <img class="input__minus" src="./images/icon-minus.svg" alt="minus">
+              <input type="text" value="0" class="input__number">
+              <img class="input__plus" src="./images/icon-plus.svg" alt="plus">
+                        
+            </div>
+            <button class="details__button"><img src="./images/icon-cart-white.svg" alt="icon-cart" class="details__icon-cart" > Add to cart</button>
+          </div>
+        
+          
+
+        </article>
+    </section>
+
+    
+    <!-- beginning-  cart modal filled -->
+
+
+    <div class="cart-modal">
+      <p class="cart-modal__title">Cart</p>
+      <div class="cart-modal__checkout-container">
+          <div class="cart-modal__details-container">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail" class="cart-modal__img" >
+            <div>
+              <p class="cart-modal__product">Autumns Limited Edition...</p>
+              <p class="cart-modal__prices">$125.00 x 3 <span>$375.00</span></p>
+            </div>
+            <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="icon-delete"  >
+          </div>
+          <button class="cart-modal__button">Checkout</button>
+      </div>
+    </div>
+    
+    <!-- end - cart modal filled -->
+
+
+   
+
+  
+
+  
+  
+  </main>
+  
+   
+  
+  <footer class="attribution">
+    
+   
+  </footer>
+  <!-- beginning- gallery-modal -->
+
+
+    <div class="modal-gallery__background">
+      
+      
+      <article class="modal-gallery">
+        <div class="modal-gallery__close-container">
+        <img  class="modal-gallery__close-icon" src="./images/icon-close-white.svg" alt="icon-close">
+        </div>
+        <div class="modal-gallery__image-container">
+          <img class="modal-gallery__image-previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="modal-gallery__image-next" src="./images/icon-next.svg" alt="next" >
+        </div>
+        <!-- thumbnails for desktop only -->
+        <div class="modal-gallery__thumbnails">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="thumbnail1" id="m1" class="modal-gallery__thumbnail">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="thumbnail2" id="m2" class="modal-gallery__thumbnail">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="thumbnail3" id="m3" class="modal-gallery__thumbnail">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="thumbnail4" id="m4" class="modal-gallery__thumbnail">
+        </div>
+      </article>
+    </div>
+
+    
+    <!-- end - gallery-modal -->
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

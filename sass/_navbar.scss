@@ -1,0 +1,34 @@
+@use'variables';
+.navbar{
+    // display: none;
+    // border: 1px solid red;
+    width: 400px;
+    
+    
+    
+    
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        
+    }
+    &__link{
+        // los links son elemento de linea, por eso para darle altura debo convertirlos en elementos de bloque
+        display: block;
+        height: 112px;
+        text-decoration: none;
+        font-weight: 400;
+        color: variables.$Dark-rayish-blue;
+        padding-top: 45px;
+
+        
+        &:hover{
+            border-bottom: 3px solid variables.$Orange;
+            color: variables.$Very-dark_blue;
+        }
+    }
+    @media (max-width: 1114px) {
+        display: none;
+    }
+}

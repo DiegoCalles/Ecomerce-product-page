@@ -1,0 +1,43 @@
+
+@use 'variables' as v;
+@use 'mixins';
+.input{
+  // height: 57px;
+  background-color: v.$Light-grayish-blue;
+  border-radius: 8px;
+  padding: 15px;
+  // border: 1px solid blue;
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width:1115px) {
+        width: 55%;
+        
+      }
+  
+  &__minus{
+    padding: 13px 0px !important;
+      @include mixins.changeNumber
+      
+      
+  }
+  &__number{
+      height: 25px;
+      width: 25px;
+      font-weight: 700;
+      background-color: v.$Light-grayish-blue;    
+      border: 0;
+      text-align: center;
+      outline: none; // para que desaparezca el borde al darle click
+      
+      
+  }
+  &__plus{
+    @include mixins.changeNumber
+      
+  }
+ 
+  
+}

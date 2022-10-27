@@ -1,0 +1,105 @@
+@use 'variables' as v;
+@use 'mixins';
+
+.modal-gallery{
+    position: relative;
+    top: 88px;
+    left: 670px;
+    // border: 1px solid red;
+    width: 550px;
+    // display: none;
+    &__background{
+        display: none;
+        place-content: center;
+        @media (min-width:1115px) {
+            @include mixins.modal-background;
+        }
+        
+        
+   
+        
+        
+        
+    }
+    &__close-container{
+        // border: 1px solid blue;
+        display: flex;
+        justify-content: end;
+        
+        
+    }
+    &__close-icon{
+        
+        width: 22px;
+            
+        margin-bottom: 28px;
+        &:hover{
+            cursor: pointer;
+            content: url('../images/icon-close-orange.svg');
+        }
+
+    }
+    &__image-container{
+        background-image: url('../images/image-product-1.jpg');
+        box-shadow: 1px 1px 3px;
+        height: 550px;
+        background-size: cover;//para que la img de background se ajuste al tamaño del contenedor
+        border-radius: 16px;
+        margin-bottom: 32px;
+        @media (max-width:1115px) {
+            display: none;
+        }
+
+    }
+    &__thumbnails{
+        // border: 1px solid blue;
+        // display: none;
+        
+        @media (max-width:1115px) {
+            display: none;
+        }
+        @media (min-width:1115px) {
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+            margin: auto;
+            
+            
+        }
+        //como están muy muy grandes trabajo con los elementos thumbnail
+       
+        
+       
+    }
+    &__thumbnail{
+        
+        width: 90px;
+
+        border-radius: 8px;
+        box-shadow: 1px 1px 4px;
+         &:hover{
+            cursor: pointer;
+            border: 2px solid v.$Orange;
+            padding: none;
+            margin: 0%;
+            background-size: cover;
+            
+        }
+
+    }
+    &__image-previous{
+        @include mixins.image-btn(285px, -18px, true);
+        &:hover{
+            content: url('../images/icon-previous-orange.svg');
+        }
+        
+    }
+    &__image-next{
+        @include mixins.image-btn(285px, 525px, true);
+        &:hover{
+            content: url('../images/icon-next-orange.svg');
+        }
+        
+    }
+   
+}

@@ -1,0 +1,71 @@
+@use 'variables' as v; // para simplificar
+@use 'mixins';
+
+.cart-modal{
+    display: none;
+    // border: 1px solid blue;
+    width: 355px;
+    position: absolute;
+    top: 55px;
+    left: 9px;
+    box-shadow: 1px 1px 8px;
+    border-radius: 8px;
+    padding: 25px;
+    height: 260px;
+    background-color: v.$White;
+    @media (min-width:1115px) {
+        left: 825px;
+        top: 90px;
+    }
+    &__checkout-container{
+        // border: 1px solid red;
+        padding-bottom: 16px;
+    }
+    &__details-container{
+        // border: 1px solid orange;
+        color:v.$Dark-rayish-blue; ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+    &__title{
+        // border: 1px solid red;
+        font-weight: 700;
+        margin-bottom: 45px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid v.$Grayish-blue;
+    }
+    
+    &__img{
+        border-radius: 4px;
+        width: 55px;
+        // padding-left: 5px;
+    }
+    &__product{
+        font-size: .9em;
+        margin-bottom: 5px;
+    }
+    &__prices{
+        font-size: .9em;
+        // color: v.$Dark-rayish-blue;
+        margin-bottom: 5px;
+        
+
+    }
+    &__prices span{
+        font-weight: 700;
+        color: v.$Black;
+    }
+    &__delete:hover{
+        cursor: pointer;
+    }
+    &__button{
+        @include mixins.button
+        
+    }
+    
+
+   
+
+}

@@ -1,0 +1,145 @@
+@use 'variables' as v;
+
+
+@mixin modal-background{
+
+    background-color: v.$black-modal;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 950px;
+    z-index: 1;
+    overflow: hidden;
+    
+}
+
+@mixin image-btn($top, $left, $showDesktop) {
+     background-color: v.$White;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: $top;
+    left: $left;
+    &:hover{
+        cursor: pointer;
+       
+        
+    }
+    @media (min-width:1115px) {
+        @if($showDesktop == true){
+            display: block;
+        }
+        @else{
+            display: none;
+        }
+        
+    }
+}
+@mixin changeNumber {
+      
+    width: 10px;
+    height: 100%;
+    &:hover{
+        cursor: pointer;
+    }
+    @media (min-width:1115px) {
+        
+        padding: 9px 0px;
+        height: 30px;
+    }
+
+    
+}
+@mixin button {
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 4px;
+    border: 0;
+    height: 57px;
+    background-color: v.$Orange;
+    color: v.$White;
+    font-size: .9em;
+    font-weight: 700;
+    border-radius: 8px;
+    &:hover{
+        cursor: pointer;
+        background-color: v.$Orange-opacity;
+        
+        
+    }
+        
+}
+@mixin modal-gallery {
+     &__image-container{
+        // border: 1px solid purple;
+        box-shadow: 1px 1px 3px;
+        width: 100%;
+        height: 300px;
+        background-image: url('../images/image-product-1.jpg');
+        background-size: cover;
+        // para que la imagen suba
+        background-position-y:-35px;
+       
+        
+              
+    }
+     
+    &__image__previous{
+        @include image-btn(200px, 15px,true);
+               
+    }
+    &__image__next{
+        @include image-btn(200px, 320px,true);
+        
+    }
+    &__thumbnails{
+        // border: 1px solid blue;
+        display: none;
+        
+
+        @media (min-width:1115px) {
+            display: flex;
+            justify-content: space-between;
+            
+            
+        }
+        //como están muy muy grandes trabajo con los elementos thumbnail
+       
+        
+       
+    }
+    &__thumbnail{
+        
+        width: 90px;
+
+        border-radius: 8px;
+        box-shadow: 1px 1px 4px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid v.$Orange;
+            padding: none;
+            margin: 0%;
+            
+        }
+
+        }
+    @media (min-width:1115px) {
+        width: 446px;   // el ancho es a la gallery para que los demas elementos se adapten al ancho de  ella
+        &__image-container{
+            
+            height: 446px;
+            border-radius: 25px;
+            margin-bottom: 25px;
+            // para la parte desktop la imagen de background va mas abajo (por eso la hago:0px
+            background-position-y:0px;
+
+        }
+    }
+    
+}

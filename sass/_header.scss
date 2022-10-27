@@ -1,0 +1,92 @@
+@use'variables';
+.header{
+    // border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    padding: 0 24px;
+    @media (min-width:1115px) {
+        height: 112px;
+        border-bottom: 1px solid variables.$Grayish-blue;
+    }
+    &__logo-menu{
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 100%;
+    justify-content: space-between;
+    @media (min-width:1115px) {
+       width: 590px;
+    }
+    
+
+    }
+
+    &__menu{
+        margin-right: 15px;
+        &:hover{
+            cursor: pointer;
+        }
+        @media (min-width:1115px){
+                            
+            display:none;
+        }
+        
+    }
+    &__cart-avatar{
+        height: 100%;
+        width: 80px;
+        // border: 1px solid purple;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (min-width:1115px) {
+            width: 125px;
+        }
+    }
+    &__cart{
+        position: relative;
+        &--notification{
+            display: none;
+            height: 12px;
+            width: 17px;
+            text-align: center;
+            font-size: 0.6em;
+            background-color: variables.$Orange;
+            color: variables.$White;
+            border-radius:50%;
+            position: absolute;
+            top: -2px;
+            right: -5px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__avatar{
+        width: 24px;
+        border: 1px solid variables.$White;
+        border-radius: 50%;
+
+        @media (min-width:1115px) {
+            width: 48px;
+        }
+        &:hover{
+            cursor: pointer;
+            border-radius: 50%;
+            @media (min-width:1115px) {
+            border: 2px solid variables.$Orange; 
+            width: 50px; 
+            transition:0.2s;
+        }
+
+        }
+        
+
+    }
+}
+
+
